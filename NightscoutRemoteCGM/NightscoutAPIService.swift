@@ -68,7 +68,7 @@ public class NightscoutAPIService: ServiceAuthentication {
     
     // MARK: - ServiceAuthentication conformance
     
-    public let title = LocalizedString("Nightscout Remote CGM", comment: "The title of the Nightscout service")
+    public let title = LocalizedString("NightScout远程CGM", comment: "The title of the Nightscout service")
     public var credentialValues: [String?]
     public var isAuthorized = false
     

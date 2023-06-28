@@ -66,7 +66,7 @@ public struct SettingsView: View {
     public var body: some View {
         VStack {
             Spacer()
-            Text(LocalizedString("Nightscout Remote CGM", comment: "Title for the CGMManager option"))
+            Text(LocalizedString("NightScout远程CGM", comment: "Title for the CGMManager option"))
                 .font(.title)
                 .fontWeight(.semibold)
             Image("nightscout", bundle: frameworkBundle)
@@ -83,7 +83,7 @@ public struct SettingsView: View {
                             .padding(.leading, 10)
                     }
                     HStack {
-                        Text("Status")
+                        Text("地位")
                             .padding(.leading, 10)
                         Spacer()
                         Text(String(describing: viewModel.serviceStatus.localizedString()))
@@ -100,12 +100,12 @@ public struct SettingsView: View {
             }
             Spacer()
         }
-        .navigationBarTitle(Text("CGM Settings", bundle: frameworkBundle))
+        .navigationBarTitle(Text("CGM设置", bundle: frameworkBundle))
         .navigationBarItems(
             trailing: Button(action: {
                 self.viewModel.onClose.send()
             }, label: {
-                Text("Done", bundle: frameworkBundle)
+                Text("完毕", bundle: frameworkBundle)
             })
         ).onAppear {
             viewModel.viewDidAppear()
@@ -116,12 +116,12 @@ public struct SettingsView: View {
         Button(action: {
             showingDeletionSheet = true
         }, label: {
-            Text("Delete CGM", bundle: frameworkBundle).foregroundColor(.red)
+            Text("删除CGM", bundle: frameworkBundle).foregroundColor(.red)
         }).actionSheet(isPresented: $showingDeletionSheet) {
             ActionSheet(
-                title: Text("Are you sure you want to delete this CGM?"),
+                title: Text("您确定要删除此CGM吗？"),
                 buttons: [
-                    .destructive(Text("Delete CGM")) {
+                    .destructive(Text("删除CGM")) {
                         self.viewModel.onDelete.send()
                     },
                     .cancel(),

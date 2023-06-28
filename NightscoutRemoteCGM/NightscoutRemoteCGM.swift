@@ -19,7 +19,7 @@ public class NightscoutRemoteCGM: CGMManager {
         return NightscoutRemoteCGM.managerIdentifier
     }
 
-    public static let localizedTitle = LocalizedString("Nightscout Remote CGM", comment: "Title for the CGMManager option")
+    public static let localizedTitle = LocalizedString("NightScout远程CGM", comment: "Title for the CGMManager option")
     
     public var localizedTitle: String {
         return NightscoutRemoteCGM.localizedTitle
