@@ -83,7 +83,7 @@ public struct SettingsView: View {
                             .padding(.leading, 10)
                     }
                     HStack {
-                        Text("地位")
+                        Text("状态")
                             .padding(.leading, 10)
                         Spacer()
                         Text(String(describing: viewModel.serviceStatus.localizedString()))
